@@ -1,0 +1,122 @@
+.add-student-container {
+  border-radius: 6px;
+  background-color: white;
+  margin: 0.5rem;
+  padding: 3rem;
+  width: 100%;
+
+  .alert-submit {
+    position: fixed;
+    top: 2rem 1.5rem;
+    padding: 1rem;
+    border-radius: 6px;
+    left: 50%;
+   
+    color: white;
+    z-index: 10;
+  }
+
+
+  .alert-error {
+    position: fixed;
+    top: 2rem 1.5rem;
+    padding: 1rem;
+    border-radius: 6px;
+    left: 50%;
+   
+    color: white;
+    z-index: 10;
+
+ 
+  }
+  .upload-docs{
+    width: 50%;
+      
+
+  }
+
+  .student-dp{
+
+    img{
+      margin: 1rem;
+      border: 1px solid black;
+    }
+    input{
+      margin: 3rem;  
+    }
+  }
+
+  .radioGroup{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      .radioBtn{
+          margin: 1rem;
+          flex-grow: 1;
+          font-size: large;
+        
+         
+      }
+
+      .rb-selected{
+        background-color: black;
+      }
+
+      .rb-not-selected{
+        background-color: #cfd8dc;
+        color: #78909c;
+
+      }
+  }
+
+  h1,
+  h2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .transferFieldsVisible {
+    display: flex;
+  }
+  .transferFieldsHidden {
+    display: none;
+  }
+
+  img {
+    width: 16rem;
+    height: 16rem;
+  }
+
+  .addStudentBtn {
+    width: max-content;
+    height: 4rem;
+    margin-right: 1rem;
+    font-size: medium;
+    background-color: #1f2937;
+  }
+  .submitting-status {
+    margin-top: 4rem;
+   display: flex;
+   align-items: center;
+  }
+
+  Form.Label {
+  }
+
+  .formTitle {
+    font-size: medium;
+  }
+  .formInput {
+    font-size: medium;
+  }
+
+  .multiFields {
+    display: flex;
+    gap: 16px;
+    .multiFieldsItem {
+      flex-basis: 120px;
+      flex-grow: 1;
+    }
+  }
+}

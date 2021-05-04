@@ -1,0 +1,123 @@
+.feeslog-container{
+    // background-color: yellow;
+    width: 100%;
+
+    .fees-student-info {
+        display: flex;
+        flex-wrap: wrap;
+        width: 95%;
+        margin-left: 2.3%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-top: 2rem;
+        // margin-bottom: -1rem;
+        background-color: white;
+        border-radius: 1rem;
+        justify-content: space-between;
+    
+        .student-name{
+            display: flex;
+            flex-wrap: nowrap;
+            width: 30%;
+            // background-color: yellow;
+            margin-left: 2rem;
+            padding-top: 1rem;
+            font-size: 1.8rem;
+            .student-name-header{
+                font-weight: bold;
+                // width: 23rem;
+            }
+            .student-name-value{
+                // width: 23rem;
+                margin-left: 2%;
+            }
+        }
+    
+        .student-rollno{
+            display: flex;
+            width: 30%;
+            // background-color: yellow;
+            // margin-left: 20%;
+            padding-top: 1rem;
+            font-size: 1.8rem;
+            .student-rollno-header {
+                font-weight: bold;
+            }
+            .student-rollno-value{
+                margin-left: 2%;
+            }
+        }
+        .student-uid{
+            display: flex;
+            width: 30%;
+            // background-color: yellow;
+            // margin-left: 15%;
+            padding-top: 1rem;
+            font-size: 1.8rem;
+            .student-uid-header {
+                font-weight: bold;
+            }
+            .student-uid-value{
+                margin-left: 2%;
+            }
+        }
+    }
+    .admission-fees-container{
+        width: 35rem;
+        margin-left: 2.3%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-top: 2rem;
+        // margin-bottom: -1rem;
+        background-color: white;
+        border-radius: 1rem;
+
+        .admission-fees{
+           
+            margin-top: 2rem;
+            margin-left: 2rem;
+            font-size: 2.5rem;
+            .admission-fees-header{
+                font-weight: bold;
+            }
+            .admission-fees-value{
+                margin-left: 2%;
+            }
+        }
+        .admission-fees-status{
+            margin-top: 2rem;
+            margin-left: 2rem;
+            margin-bottom: 2rem;
+            // font-size: 2rem;
+            .admission-fees-status-notification{
+                display: flex;
+                .admission-value-style{
+                    width: 13rem;
+                    height: 4rem;
+                    text-align: center;
+                    padding-top: .5rem;
+                    padding-bottom: .5rem;
+                    font-size: 1.8rem;
+                    color: white;
+                    margin-right: 1.5rem;
+                    // background-color: rgb(25, 194, 25);
+                }
+            }
+            .statusvaluered{
+                background-color: indianred;
+            }
+            .statusvaluegreen{
+                background-color: rgb(25, 194, 25);
+            }
+            .admission-style{
+                margin-bottom: 1rem;
+                font-size: 2rem;
+            }
+        }
+        
+    }
+    .tution-fee-wrap{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

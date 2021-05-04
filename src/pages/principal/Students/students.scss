@@ -1,0 +1,112 @@
+@import "../../../assests/Sass_variables/variables";
+.parent-container {
+  width: 100%;
+
+  .search-filter {
+    margin-left: 0;
+    margin-bottom: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    .search-box {
+      border-radius: 6px;
+      flex-grow: 1;
+      background-color: white;
+      box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+      -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+      margin: 0.5rem;
+      display: flex;
+
+      .search-input {
+        height: 45px;
+        width: 100%;
+        padding: 10px;
+        border: 0;
+        outline: none;
+        font-size: small;
+        color: tomato;
+        background: none;
+      }
+    }
+  }
+
+    .dropdown {
+      border-radius: 6px;
+      flex-grow: 1;
+      
+      #dropdown-basic {
+        margin-left: 1rem;
+        height: 4rem;
+        box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+        -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+        font-size: small;
+      }
+      .dropdownItem {
+        font-size: small;
+      }
+    }
+  }
+
+.allStudents-container {
+  height: 100vh;
+
+  .studentCardLink {
+    text-decoration: none;
+    color: $black-color;
+  }
+}
+
+.singleStudent-heading {
+  border-radius: 6px;
+  font-variant-caps: to-upper-case($string: "");
+  background-color: #1f2937;
+  display: flex;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: -0.5rem;
+  padding: 1rem;
+  flex-wrap: wrap;
+  max-width: 100%;
+  align-content: center;
+  align-items: center;
+
+  p {
+    color: white;
+    font-weight: bold;
+    font-size: small;
+    margin: 1rem;
+    flex-basis: 50px;
+    flex-grow: 1;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  }
+
+  #class {
+    text-align: center;
+    flex-basis: 10px;
+  }
+  #section {
+    text-align: center;
+    flex-basis: 10px;
+  }
+
+  #gender {
+    text-align: center;
+    flex-basis: 10px;
+  }
+
+  img {
+    width: 4rem;
+    height: 4rem;
+  }
+}

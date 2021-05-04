@@ -1,0 +1,55 @@
+@import "./assests/Sass_variables/variables";
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap');
+html {
+    font-size: 10px;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Sawarabi Gothic', sans-serif;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+
+body {
+    font-size: 1.6rem;
+    color: $black-color;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media only screen and (max-width: 1300px) {
+    html {
+      font-size: 9px;
+    }
+  }
+
+
+@media only screen and (max-width: 500px) {
+    #root {
+        visibility: hidden;
+        position: relative;
+    }
+    #root::after {
+        visibility: visible;
+        position: absolute;
+        top: 60%;
+        left: 10%;
+        content: "Please Open this website in bigger screen";
+    }
+}

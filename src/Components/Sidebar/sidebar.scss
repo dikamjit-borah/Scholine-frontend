@@ -1,0 +1,85 @@
+@import "./../../assests/Sass_variables/variables";
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+
+
+.sidebar {
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    width: $sidebar-width;
+    z-index: 1;
+    background-color: $sidebar-background;
+    color: white;
+    // border-right: $sidebar-border;
+
+    .sidebar_wrapper {
+        position: relative;
+        width: $sidebar-width;  
+        min-height: 100%;  
+        .sidebar_header {
+            text-align: center;
+            // border-bottom: $sidebar-border;
+            padding-bottom: 1.3rem;
+            
+            p {
+                font-size: 3rem;
+                margin-top: 1.6rem;
+            }
+    
+            .navHeading{
+               
+               font-family: "Monoton", cursive;;
+            }
+        }
+      
+    }
+
+    
+    .nav {
+        margin-top: 2rem;
+        
+        li {
+            width: 90%;
+            margin: auto;
+
+            &:not(:first-child) {
+                margin-top: 0.5rem;
+            }
+
+            &.active .nav_link {
+                background-color: $sidebar-hover;
+                opacity: 1;
+            }
+            
+            .nav_link {
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                padding: 1rem 0.9rem;
+                border-radius: 5px;
+                opacity: 0.75;
+
+                &:hover {
+                    background-color: $sidebar-hover;
+                    opacity: 1;
+                }
+            }
+
+            .icon {
+                font-size: 2rem;
+                color: white;
+                // opacity: .8;
+            }
+
+            p {
+                font-size: 1.8rem;
+                font-weight: 500;
+                margin: 0;
+                margin-left: 1rem;
+                color: white;
+            }
+
+        }
+    }
+}

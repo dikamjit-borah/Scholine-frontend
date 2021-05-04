@@ -1,0 +1,119 @@
+@import "./../../assests/Sass_variables/variables";
+// .container {
+//     text-align: center;
+//     // margin-top: 10rem;
+// }
+.form-container {
+    // padding-top: 20rem;
+    // margin: 2rem;
+    width: 100%;
+    // background-color: white;
+
+    .form-header {
+        text-align: center;
+    }
+    .form-input {
+        width: 95%;
+        margin-left: 2.3%;
+        padding-top: .5rem;
+        padding-bottom: 1rem;
+        margin-top: 1rem;
+        background-color: white;
+
+        .form-group {
+            margin-left: 7rem;
+            margin-top: 4rem;
+            .form-label {
+                color: #333333;
+                // margin-right: 4rem;
+                // margin-bottom: -5rem;
+                justify-items: right;
+                font-size: 2rem;
+                font-weight: bold;
+            }
+            .form-control {
+                // border-radius: 2rem;
+                // display: none;
+                // margin-top: 1rem;
+                width: 35rem;
+                font-size: 1.7rem;
+                border-top-style: hidden;
+                border-right-style: hidden;
+                border-left-style: hidden;
+                border-bottom-style: groove;
+                outline: none;
+                // background-color: #eee;
+                // pointer-events: none;
+            }
+            input::placeholder{
+                color: rgb(207, 200, 200);
+            }
+            
+            #form-label1 {
+                margin-right: 25rem;
+            }
+            #form-label2 {
+                margin-right: 11rem;
+            }
+            #form-label3 {
+                margin-right: 14.5rem;
+            }
+            #form-label4 {
+                margin-right: 17rem;
+            }
+            #form-label5 {
+                margin-right: 15.5rem;
+            }
+            #form-label6 {
+                margin-right: 17rem;
+            }
+            #form-label7 {
+                margin-right: 9.5rem;
+            }
+            #form-label8 {
+                margin-right: 11rem;
+            }
+            #form-label9 {
+                margin-right: 6rem;
+            }
+            #form-label10 {
+                margin-right: 25rem;
+            }#form-label11 {
+                margin-right: 25rem;
+            }
+            #form-label12 {
+                margin-right: 25rem;
+            }
+            #form-label13 {
+                margin-right: 25rem;
+            }
+            #form-label14 {
+                margin-right: 25rem;
+            }#form-label15 {
+                margin-right: 25rem;
+            }
+            #form-label16 {
+                margin-right: 25rem;
+            }
+            #form-label17 {
+                margin-right: 25rem;
+            }
+            #form-label18 {
+                margin-right: 25rem;
+            }
+            #form-label19 {
+                margin-right: 25rem;
+            }#form-label20 {
+                margin-right: 25rem;
+            }
+            
+            #form-label21 {
+                margin-right: 25rem;
+            }
+            #form-label22 {
+                margin-right: 25rem;
+            }
+            
+        }
+    }
+}

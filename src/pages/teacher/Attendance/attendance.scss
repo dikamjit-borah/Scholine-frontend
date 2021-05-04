@@ -1,0 +1,45 @@
+@import "../../../assests/Sass_variables/variables";
+
+.attendance-container {
+    border-radius: 6px;
+    background-color: white;
+    margin: 0.5rem;
+    padding: 3rem;
+    width: 50%;
+    border: 2px solid rgba($light-gray, 0.8);
+    height: max-content;
+
+    .attendance-form{
+      margin:1rem;
+      
+    }
+
+    button{
+      margin-top:1rem;
+      font-size: large;
+    }
+
+    .attendance-buttons{
+      display: flex;
+      button{
+      
+        margin:1rem;
+        flex: 1;
+      }
+    }
+
+    .formTitle {
+      font-size: medium;
+    }
+    .formInput {
+      font-size: medium;
+    }
+    .multiFields {
+        display: flex;
+        gap: 16px;
+        .multiFieldsItem {
+          flex-basis: 120px;
+          flex-grow: 1;
+        }
+      }
+}

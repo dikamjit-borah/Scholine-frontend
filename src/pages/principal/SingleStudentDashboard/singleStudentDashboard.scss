@@ -1,0 +1,148 @@
+@import "../../../assests/Sass_variables/variables";
+.student-dashboard-container {
+  width: 90%;
+  border-radius: 6px;
+  background-color: white;
+  border: 2px solid rgba($light-gray, 0.8);
+  // -webkit-box-shadow: 2px 5px 26px -3px rgba(0, 0, 0, 0.3);
+  // box-shadow: 2px 5px 26px -3px rgba(0, 0, 0, 0.3);
+
+  .transferDetailData-div {
+    h2 {
+      padding: 4rem;
+    }
+  }
+
+  hr {
+    margin: 0 !important;
+  }
+
+  .header {
+    padding: 2rem;
+    padding-left: 3rem;
+    display: flex;
+    align-content: center;
+    align-items: center;
+
+    img {
+      margin-right: 3rem;
+      width: 10rem;
+      height: 10rem;
+    }
+  }
+
+  .item-div-studentDashboard {
+    width: 100%;
+
+    padding: 1.5rem 4rem;
+    display: flex;
+
+    align-items: center;
+
+    .item-div-transfer {
+      display: flex;
+      width: 100%;
+      .subtitle,
+      .title {
+        flex-grow: 1;
+        flex-basis: 1;
+      }
+      .subMarks {
+        display: flex;
+        flex-grow: 1;
+        flex-basis: 0;
+        .title {
+          color: black;
+          font-weight: 600;
+        }
+        .subtitle {
+          color: black;
+          font-weight: 700;
+        }
+      }
+    }
+
+    &:nth-child(2n + 1) {
+      background-color: #fafafa;
+    }
+
+    hr {
+      padding: 0;
+      margin: 0 !important;
+      border-top: 1px solid #8c8b8b;
+    }
+    .title {
+      flex-basis: 0;
+      flex-grow: 1;
+      font-size: 1.8rem;
+      color: $black-color-light;
+      font-weight: 00;
+    }
+    .subtitle {
+      text-transform: capitalize;
+      font-weight: 500;
+      color: $dark-gray;
+      flex-basis: 0;
+      flex-grow: 1;
+      font-size: large;
+    }
+  }
+
+  p {
+    font-size: small;
+  }
+
+  .right-side {
+    margin-left: auto;
+
+    h2 {
+      margin-left: 1rem;
+      color: #f44336;
+      cursor: pointer;
+    }
+  }
+  .buttons-div-studentDashboard {
+    display: flex;
+
+    a {
+      color: white;
+    }
+
+    .button {
+      justify-content: center;
+      color: whitesmoke;
+      box-sizing: border-box;
+      appearance: none;
+      background-color: #1f2937;
+      border: 1px solid #e0f2f1;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      align-self: center;
+      font-size: 0.5rem;
+      font-weight: 400;
+      line-height: 1;
+      margin: 10px;
+      padding: 1.2em 2.8em;
+      text-decoration: none;
+      text-align: center;
+      text-transform: uppercase;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      flex-grow: 1;
+
+      font-size: small;
+      padding: 1rem 1.5rem;
+    }
+
+    .anim {
+      transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+      &:hover {
+        box-shadow: 0 0 2px 2px white inset;
+      }
+    }
+    #suspend {
+      background-color: #f44336;
+    }
+  }
+}
