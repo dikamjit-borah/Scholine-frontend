@@ -75,13 +75,16 @@ function EditStudentPage(prop) {
       tempform.append("file", element[1].file,  element[1].fullFileName);
     });
 
+    
 
 
     await axios
-      .post(`${BASE_URL}/students/update`, tempform, {
+      .post(`${BASE_URL}/students/update`, tempform,
+      {
         headers: {
-          "Content-Type": `multipart/form-data; boundary=${tempform.getBoundary}`,
-        },
+          "Authorization": 'Bearer ' + localStorage.getItem("token"),
+          "Content-Type": `multipart/form-data; boundary=${tempform.getBoundary}`
+        }
       })
       .then((response) => setsubmittingStatus("submitted"))
       .catch((err) => {
@@ -96,7 +99,11 @@ function EditStudentPage(prop) {
   }, []);
 
   const fetchData = async (id) => {
-    const result = await axios(`${BASE_URL}/students/${id}`);
+    const result = await axios(`${BASE_URL}/students/${id}`,  {
+      headers: {
+        Authorization: 'Bearer ' + localStorage.getItem("token") 
+      }
+    });
     console.log(result.data.mainData);
     setMainData(result.data.mainData);
     setTransferDetailData(result.data.transferDetailData);

@@ -46,25 +46,23 @@ function AddStudent() {
 
     if (e.target.files[0]) {
       let fullFileName = "" + name + "." + e.target.files[0].name.split(".")[1];
-      console.log(fullFileName);
+  
 
       arr[id] = { file: e.target.files[0], fullFileName };
       setDocuments(arr);
-      console.log(documents);
-      console.log("yoyoyoy", Object.keys(documents).length);
     }
   };
 
   const handleImg = (e, name) => {
     const file = e.target.files[0];
     if (file) {
-      console.log("File sizzzzze = ", file.size);
+      
       if (file.size > 300000) {
         e.target.value = null;
         return alert("File Size is more than 300KB");
       }
       let fullFileName = "" + name + "." + e.target.files[0].name.split(".")[1];
-      console.log(file.name);
+      
       setImg({
         src: URL.createObjectURL(file),
         alt: file.name,
@@ -97,8 +95,9 @@ function AddStudent() {
     await axios
       .post(`${BASE_URL}/students/add`, tempform, {
         headers: {
-          "Content-Type": `multipart/form-data; boundary=${tempform.getBoundary}`,
-        },
+          "Authorization": 'Bearer ' + localStorage.getItem("token"),
+          "Content-Type": `multipart/form-data; boundary=${tempform.getBoundary}`
+        }
       })
       .then((response) => {
         setsubmittingStatus("submitted");
@@ -109,9 +108,7 @@ function AddStudent() {
       .catch((err) => {
         setsubmittingStatus("notSubmitted");
         setIsError(true);
-        console.log(err.response.data);
-        console.log(err);
-        console.log(err.response.data.error.message);
+
         setErrorMsg(err.response.data.error.message)
       });
    

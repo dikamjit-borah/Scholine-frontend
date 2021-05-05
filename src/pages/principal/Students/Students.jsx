@@ -44,7 +44,7 @@ function Students() {
     createdAt: "2021-03-19T11:03:18.000Z",
     updatedAt: "2021-03-19T11:03:18.000Z",
   };
-  const url = "192.168.29.207:8080";
+
   const [dataLength, setDataLength] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
   const [data, setData] = useState([]);
@@ -58,7 +58,11 @@ function Students() {
 
   useEffect(() => {
     const fetchData = async () => {
-      await axios(`${BASE_URL}/students`)
+      await axios.get(`${BASE_URL}/students`, {
+        headers: {
+          Authorization: 'Bearer ' + localStorage.getItem("token") //the token is a variable which holds the token
+        }
+      })
         .then((response) => {
           setData(response.data);
           setDataLength(response.data.length);
@@ -83,7 +87,11 @@ function Students() {
       searchType: filterType,
     };
     await axios
-      .post(`${BASE_URL}/students/search`, searchReq)
+      .post(`${BASE_URL}/students/search`, searchReq, {
+        headers: {
+          Authorization: 'Bearer ' + localStorage.getItem("token") 
+        }
+      })
       .then((response) => {
         setData(response.data.data);
         setIsLoaded(true);

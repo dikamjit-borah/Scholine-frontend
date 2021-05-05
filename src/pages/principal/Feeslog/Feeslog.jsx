@@ -38,10 +38,14 @@ function Feeslog() {
 
   useEffect(() => {
     const id = location.pathname.split("/")[3];
-    console.log(id);
+  
     setGlobalId(id);
     const fetchData = async () => {
-      axios(`${BASE_URL}/fees/${id}`).then((result) => {
+      axios.get(`${BASE_URL}/fees/${id}`,  {
+        headers: {
+          Authorization: 'Bearer ' + localStorage.getItem("token") 
+        }
+      }).then((result) => {
         setData(result.data);
         setFessstatus(result.data.dataResponse.dues.monthly);
         console.log("result", result.data);
@@ -98,7 +102,11 @@ function Feeslog() {
     console.log(xx);
 
     axios
-      .post(`${BASE_URL}/fees/update`, xx)
+      .post(`${BASE_URL}/fees/update`, xx,  {
+        headers: {
+          Authorization: 'Bearer ' + localStorage.getItem("token") 
+        }
+      })
       .then((res) => {
         console.log(res.data);
         setloader(true);

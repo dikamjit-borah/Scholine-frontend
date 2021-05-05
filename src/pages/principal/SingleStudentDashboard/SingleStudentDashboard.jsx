@@ -22,7 +22,11 @@ function SingleStudentDashboard() {
   }, []);
 
   const fetchData = async (id) => {
-    await axios(`${BASE_URL}/students/${id}`)
+    await axios(`${BASE_URL}/students/${id}`, {
+      headers: {
+        Authorization: 'Bearer ' + localStorage.getItem("token") 
+      }
+    })
       .then((response) => {
         setData(response.data.mainData);
         if (response.data.mainData.is_transferred_student === 1) {
