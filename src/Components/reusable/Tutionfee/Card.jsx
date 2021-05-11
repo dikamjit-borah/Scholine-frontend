@@ -52,7 +52,11 @@ export default function Card({ element, id, sid,monthlyFee, tutionError }) {
     xx["feesData"] = feesData;
 
     axios
-      .post(`${BASE_URL}/fees/update`, xx)
+      .post(`${BASE_URL}/fees/update`, xx,  {
+        headers: {
+          Authorization: 'Bearer ' + localStorage.getItem("token") 
+        }
+      })
       .then((res) => { 
         console.log(res.data)
         console.log("data updeted")
