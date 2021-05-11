@@ -17,7 +17,11 @@ function NavBar() {
         <div className="main_navbar">
             <div className="main_navbar_wrapper">
                 <h2>{getNavHeader()}</h2>
-                <p onClick={handleLogout}>Log out</p>
+                <p 
+                style={{
+                    cursor:"pointer"
+                }}
+                onClick={handleLogout}>Log out</p>
             </div>
         </div>
     )

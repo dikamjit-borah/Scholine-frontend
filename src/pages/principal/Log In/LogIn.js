@@ -65,6 +65,10 @@ function Login() {
   return (
     <div className="login-form-container">
       <div className="login-form">
+        <p>*test credentials*</p>
+        <p style={{
+          backgroundColor:"#bdbdbd"
+        }}>admin@gmail.com <b>123</b></p>
         <div className="login-form-header">
         
           <div className="login-form-header-name">
